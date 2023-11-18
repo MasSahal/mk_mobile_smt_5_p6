@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Demo Login',
+      title: 'Latihan Login',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final passController = TextEditingController();
 
   Future userLogin() async {
-    String url = "http://localhost/mk_mobile_smt_5/server_p6/auth.php";
+    String url = "http://localhost/kuliah/mk_mobile_smt_5/server_p6/auth.php";
     setState(() {
       _visible = true;
     });
@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           var userInfo = msg['userInfo'];
           if (userInfo != null) {
-            var userName = userInfo['username'];
+            var userName = userInfo['full_name'];
 
             Future.delayed(Duration.zero, () {
               Navigator.push(
